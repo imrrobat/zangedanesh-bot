@@ -24,6 +24,7 @@ async def main():
     dp.message.register(start_handler, CommandStart())
     dp.message.register(help_handler, Command("help"))
 
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
 
