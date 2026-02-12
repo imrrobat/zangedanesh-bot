@@ -1,0 +1,28 @@
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+
+
+def main_menu_keyboard():
+    keyboard = ReplyKeyboardMarkup(
+        keyboard=[
+            [KeyboardButton(text="دوره های زنگ دانش 🎓")],
+            [KeyboardButton(text="لینک های مفید 🔗")],
+            [KeyboardButton(text="آموزش های کاربردی 📚")],
+            [KeyboardButton(text="تماس با من 🗣")],
+        ],
+        resize_keyboard=True,
+        input_field_placeholder="یکی از گزینه ها را انتخاب کنید",
+    )
+
+    return keyboard
+
+
+CONTACT_ME_TEXT = """
+سلام به تمام زنگ دانشی‌ها 👋🏻❤️من امیر صالح هستم موسس و مدیر مجموعه آموزشی زنگ‌دانش. در پایین تمام راه‌های ارتباطی با من رو میتونید پیدا کنید 👇🏻
+
+🔗 آیدی تلگرام: @AmiirSaleh
+🔗 اینستاگرام: https://www.instagram.com/zangedanesh
+🔗 کانال تلگرام: https://t.me/zangedanesh
+🔗 یوتوب: https://www.youtube.com/@zangedanesh
+🔗 آپارات: https://www.aparat.com/zangedanesh/
+🔗 وبسایت: https://www.zangedanesh.com/
+"""
