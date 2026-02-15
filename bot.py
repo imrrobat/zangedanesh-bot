@@ -8,7 +8,7 @@ from aiogram.fsm.context import FSMContext
 
 from dotenv import load_dotenv
 from db import init_db, get_user_by_telegram_id, add_user
-from utils import main_menu_keyboard, CONTACT_ME_TEXT
+from utils import main_menu_keyboard, useful_links_keyboard, USEFUL_LINKS_TEXT
 
 load_dotenv()
 init_db()
@@ -57,8 +57,9 @@ async def help_handler(pm: Message):
 
 async def contact_handler(pm: Message):
     await pm.answer(
-        CONTACT_ME_TEXT,
-        reply_markup=main_menu_keyboard(),
+        USEFUL_LINKS_TEXT,
+        reply_markup=useful_links_keyboard(),
+        disable_web_page_preview=True,
     )
 
 
